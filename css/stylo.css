@@ -1,0 +1,29 @@
+section{
+    height: 2000px;
+}
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.top{
+    height: 25%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: blue;
+}
+
+.bottom{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+.bottom ul li{
+    border: solid red 2px;
+    display: inline;
+}
+li{
+    border: green solid 2px;
+}
