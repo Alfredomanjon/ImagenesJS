@@ -59,6 +59,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 #imagenes{
+    display: grid;
+    
     padding: 5%;
     border: solid rgb(13, 218, 115) 2px;
 }
