@@ -31,21 +31,27 @@
 </section>
 
 
-<h2>Animated Modal with Header and Footer</h2>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 id="algo"></h1>
 
-<h2>Animated Modal with Header and Footer</h2>
 
 <!-- Trigger/Open The Modal -->
-<div id="imagenes">
-    <img src="img/maceta1.jpg" id="maceta1" width="400">
-    <img src="img/maceta2.jpg" id="maceta2" width="400">
-    <img src="img/maceta3.jpg" id="maceta3" width="400">
-    <img src="img/maceta4.jpg" id="maceta4" width="400">
-    <img src="img/maceta5.jpg" id="maceta5" width="400">
-    <img src="img/maceta6.jpg" id="maceta6" width="400">
-    <img src="img/maceta7.jpg" id="maceta7" width="400">
-    <img src="img/maceta8.jpg" id="maceta8" width="400">
-    <img src="img/maceta9.jpg" id="maceta9" width="400">
+<div class="prueba">
+
+    <div><img src="img/1.jpg" id="1" width="400"></div>
+    <div><img src="img/2.jpg" id="2" width="400"></div>
+    <div><img src="img/3.jpg" id="3" width="400"></div>
+    <div><img src="img/4.jpg" id="4" width="400"></div>
+    <div><img src="img/5.jpg" id="5" width="400"></div>
+    <div><img src="img/6.jpg" id="6" width="400"></div>
+    <div><img src="img/7.jpg" id="7" width="400"></div>
+    <div><img src="img/8.jpg" id="8" width="400"></div>
+    <div><img src="img/9.jpg" id="9" width="400"></div>
 
 </div>
 
@@ -54,9 +60,9 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-        <div class="modal-header">
-            <img src="img/maceta1.jpg" id="myBtn" width="800">
-        </div>
+
+        <img src="" id="myBtn" width="800">
+
 
     </div>
 
@@ -65,15 +71,22 @@
 <script>
     // Get the modal
     var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("maceta1");
-
     
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        modal.style.display = "block";
+    // Get the button that opens the modal
+    var str1 = "img/"
+    var str2 = ".jpg"
+    for (i = 1; i <= 9; i++) {
+        var selected = document.getElementById(i);
+        // When the user clicks the button, open the modal 
+        selected.onclick = function () {
+            modal.style.display = "block";
+            
+            document.getElementById("myBtn").src = str1.concat((i-1), str2)
+        }
+        document.getElementById("algo").innerHTML = str1.concat(i, str2)
     }
+    
+
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
